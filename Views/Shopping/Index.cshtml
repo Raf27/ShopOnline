@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ShopOnline.ViewModel.ShoppingViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    function AddToCart(item) {
+        var itemId = $(item).attr("itemid");
+        var formData = new FormData();
+        formData.append("ItemId", itemId);
+
+        $.ajax({
+            async: true,
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: formData,
+            url: '/Shopping/Index',
+            success: function (data) {
+                if(data.Success)
+                {
+                    $("#cartItem").text("Cart(" + data.Counter + ")");
+                }
+            },
+            error: function () {
+                alert("There is some problem.");
+            }
+        });
+    }
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Shop</title> 
+</head>
+
+<body id="body1">
+    <div class="container" id="container1">
+        <h2 class="text-center">Products List</h2>
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4" style="border: 2px solid black" >
+                <div>
+                    <div class="col-md-8" style="border-right: 2px solid blue">
+                        <img src="@Url.Content(@item.ImagePath)" width="150px" height="150px" />
+                    </div>
+                    <div class="col-md-4" style="text-align: left">
+                        <b>@item.Description</b>
+                    </div>
+                </div>
+
+                <div class="col-md-8" style="font-size: 18px; border-top: 2px solid blue; padding: 2px">
+                    <b>@item.ItemPrice.ToString("#,##0.00 Lei")</b>
+                </div>
+                <div class="col-md-4" style="text-align: right; margin-bottom: 10px; border-top: 2px solid blue; padding: 2px">
+                    <input type="button" name="AddToCart" value="Add to Cart" class="btn btn-primary" itemid="@item.ItemId" id="btnAddToCart" onclick="AddToCart(this)" />
+                </div>
+
+            </div>
+        }
+
+    </div>
+</body>
+
