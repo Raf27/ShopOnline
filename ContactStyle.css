@@ -1,0 +1,117 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(Images/contact.jpg)
+}
+
+.contact-main {
+    display: flex;
+    margin: 80px 0;
+}
+
+.contact-second {
+    display: flex;
+    flex: 1;
+    -webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+
+.second1 {
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('Images/12.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    padding: 100px 0;
+}
+
+    .second1 p {
+        padding-left: 20%;
+        font-size: 20px;
+        text-shadow: 0px 0px 2px #000000;
+    }
+
+        .second1 p span {
+            font-size: 16px;
+            color: #9df2fd;
+        }
+
+.second2 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inside-contact {
+    width: 90%;
+    margin: 0 auto;
+}
+
+    .inside-contact h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .inside-contact h3 {
+        text-align: center;
+        font-size: 16px;
+        color: #0085e2;
+    }
+
+    .inside-contact input, .inside-contact textarea {
+        width: 100%;
+        background-color: #eee;
+        border: 1px solid rgba(0,0,0,0.48);
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+
+        .inside-contact input[type="submit"] {
+            background-color: #000000;
+            color: #fff;
+            transition: 0.2s all ease-in;
+            border: 2px solid #000;
+            margin: 30px 0;
+        }
+
+            .inside-contact input[type="submit"]:hover {
+                background-color: #fff;
+                color: #000;
+                border: 2px solid #000;
+                transition: 0.2s all ease-in;
+            }
+
+@media screen and (max-width:991px) {
+    .contact-main {
+        display: block;
+        width: 100%;
+    }
+
+    .second1 {
+        display: none;
+    }
+
+    .second2 {
+        background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url('Images/12.jpg');
+        background-size: cover;
+    }
+
+    .inside-contact input, .inside-contact textarea {
+        background-color: #fff;
+    }
+
+    .contact-main {
+        margin: 40px 0;
+    }
+}

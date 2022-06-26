@@ -1,0 +1,94 @@
+﻿body {
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+}
+
+.cover{
+    background:url('Images/4.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#Image1{
+    width:24vw;
+    height:60vh;
+}
+.elements{
+    position:absolute;
+    top:0;bottom:0;right:0;left:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.intro{
+    width:42vw;
+    height:90vh;
+    box-shadow:black 0px 60px 80px;
+}
+
+#Label1{
+    display:block;
+    padding-top:1vh;
+    padding-left:7.5vw;
+    font-size:4vw;
+    font-size:6vh;
+    font-family:'Leckerli One','Algerian';
+    text-shadow:red 0px 20px 20px;
+}
+
+.txt1{
+    margin-top:2vh;
+    margin-left:2vw;
+}
+.txt2{
+    margin-top:2vh;
+    margin-left:2vw;
+}
+
+.txt3{
+    margin-top:2vh;
+    margin-left:2vw;
+}
+.txt4{
+    margin-top:2vh;
+    margin-left:2vw;
+}
+
+
+.txt1[placeholder],.txt2[placeholder],.txt3[placeholder],.txt4[placeholder]{
+    font-family:'Oleo Script Swash Caps';
+    font-size:2vw;
+    padding-left:1vw;
+}
+.txtstyle{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    border-radius:4%;
+    background-color:rgba(252,251,251,0.80);
+    box-shadow:black 0px 30px 50px;
+}
+.btnstyle{
+    margin-top:2vh;
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    width:11vw;
+    height:7vh;
+    margin-left:6vw;
+    font-family:'Oleo Script Swash Caps';
+    font-size:2vw;
+    color:deepskyblue;
+    text-shadow:darkblue 0px 10px 10px;
+    background-color:rgba(255,255,255,0.57);
+}
+.btnstyle:hover{
+    background-color:transparent;
+    box-shadow:black 0px 90px 80px;
+}
